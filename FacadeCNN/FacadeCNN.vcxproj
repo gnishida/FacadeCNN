@@ -169,7 +169,7 @@
     </Midl>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
-      <AdditionalIncludeDirectories>$(BOOST_INCLUDEDIR);.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;../3rdparty/include;../src;../include;..\opencv\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;..\glm;..\glew;..\dlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_INCLUDEDIR);.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;../3rdparty/include;../src;../include;..\opencv\include;..\cgal\include;..\cgal\auxiliary\gmp\include;..\glm;..\glew;..\dlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_VARIADIC_MAX=10;WIN32;NDEBUG;_CONSOLE;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader />
@@ -184,8 +184,8 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;../3rdparty/lib;../lib;$(BOOST_LIBRARYDIR);../opencv/lib;../glew;$(CGAL_DIR)\lib;$(CGAL_DIR)\auxiliary\gmp\lib;..\dlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5Widgets.lib;Qt5Xml.lib;opencv_world300.lib;libboost_thread-vc120-mt-1_58.lib;CGAL-vc120-mt-4.10.1.lib;CGAL_Core-vc120-mt-4.10.1.lib;CGAL_ImageIO-vc120-mt-4.10.1.lib;libgmp-10.lib;libmpfr-4.lib;caffelib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;cudart.lib;cublas.lib;curand.lib;libprotobuf.lib;hdf5_tools.lib;hdf5_hl_fortran.lib;hdf5_fortran.lib;hdf5_hl_f90cstub.lib;hdf5_f90cstub.lib;hdf5_cpp.lib;hdf5_hl_cpp.lib;hdf5_hl.lib;hdf5.lib;leveldb.lib;cublas_device.lib;cuda.lib;libglog.lib;lmdb.lib;libopenblas.dll.a;libgflags.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;../3rdparty/lib;../lib;$(BOOST_LIBRARYDIR);../opencv/lib;../glew;..\cgal\lib;..\cgal\auxiliary\gmp\lib;..\dlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5Widgets.lib;Qt5Xml.lib;opencv_world300.lib;libboost_thread-vc120-mt-1_58.lib;CGAL-vc120-mt-4.13.lib;CGAL_Core-vc120-mt-4.13.lib;CGAL_ImageIO-vc120-mt-4.13.lib;libgmp-10.lib;libmpfr-4.lib;caffelib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;cudart.lib;cublas.lib;curand.lib;libprotobuf.lib;hdf5_tools.lib;hdf5_hl_fortran.lib;hdf5_fortran.lib;hdf5_hl_f90cstub.lib;hdf5_f90cstub.lib;hdf5_cpp.lib;hdf5_hl_cpp.lib;hdf5_hl.lib;hdf5.lib;leveldb.lib;cublas_device.lib;cuda.lib;libglog.lib;lmdb.lib;libopenblas.dll.a;libgflags.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
@@ -289,7 +289,7 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing MainWindow.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I.\..\cgal\include" "-I.\..\cgal\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -367,7 +367,7 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ImageGenerationDialog.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I.\..\cgal\include" "-I.\..\cgal\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
     </CustomBuild>
     <ClInclude Include="Utils.h" />
     <CustomBuild Include="ParameterEstimationDialog.h">
@@ -386,7 +386,7 @@
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ParameterEstimationDialog.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_VARIADIC_MAX=10 -DWIN32 -DNDEBUG -D_CONSOLE -DQT_DLL -D_MBCS  "-I$(BOOST_INCLUDEDIR)\." "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I.\..\3rdparty\include" "-I.\..\src" "-I.\..\include" "-I.\..\opencv\include" "-I.\..\cgal\include" "-I.\..\cgal\auxiliary\gmp\include" "-I.\..\glm" "-I.\..\glew" "-I.\..\dlib\include"</Command>
     </CustomBuild>
     <ClInclude Include="Regression.h" />
     <ClInclude Include="GeneratedFiles\ui_MainWindow.h" />
